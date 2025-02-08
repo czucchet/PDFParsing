@@ -1,0 +1,3 @@
+
+-- 1 Add additional sections in prompt 
+-- 2 Build code to iteratively cycle through additional documents in one go

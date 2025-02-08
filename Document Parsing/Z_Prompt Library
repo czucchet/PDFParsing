@@ -1,0 +1,159 @@
+----------------------------------------------------------------------------------------------------------------
+A GENERAL DOCUMENT REVIEW
+----------------------------------------------------------------------------------------------------------------
+1. Prompt Summary
+Summarize the following document based on the given criteria:
+✅ Summary Type: {summary_type}  
+  (Options: "Concise (one paragraph)", "Bullet Points", "Detailed")  
+✅ Length: {summary_length}  
+  (Options: "Short (50 words or less)", "Medium (3-5 sentences)", "Long (200+ words)")
+✅ Purpose: {summary_purpose}  
+  (Options: "General Understanding", "Decision Making", "Executive Briefing")  
+✅ Tone & Style: {tone_style}
+  (Options: "Professional", "Casual", "Academic")
+✅ Key Focus Areas: {focus_areas}
+  (Options: "Key Insights", "Facts Only", "Implications for [specific topic]")
+✅ Bias & Accuracy Control: {bias_accuracy}
+  (Options: "Objective only", "Include interpretations", "Explicit content only")
+✅ Format Requirements: {format_type}
+  (Options: "Plain text", "Table format", "JSON output")
+----------------------------------------------------------------------------------------------------------------
+2. Basic Document Details
+✅ Title – The main title or heading of the document.
+✅ Author(s) – Name(s) of the author(s) or contributors.
+✅ Date – The date of publication or document creation.
+✅ Document Type – Report, article, research paper, email, contract, etc.
+----------------------------------------------------------------------------------------------------------------
+3. Key Content Elements
+✅ Summary – A brief synopsis of the document’s content.
+✅ Main Topics – The core subjects discussed in the document.
+✅ Key Insights & Takeaways – Important conclusions, findings, or recommendations.
+✅ Keywords & Phrases – Frequently mentioned terms that define the document’s scope.
+✅ Sentiment Analysis – The overall tone (positive, neutral, negative).
+----------------------------------------------------------------------------------------------------------------
+4. Entities (Named Entity Recognition - NER)
+✅ People (Names) – Individuals mentioned in the document.
+✅ Organizations – Companies, institutions, or groups referenced.
+✅ Locations – Cities, countries, addresses, geographical places.
+✅ Dates & Time References – Specific days, months, years, time ranges.
+✅ Events – Conferences, historical events, meetings, project names.
+----------------------------------------------------------------------------------------------------------------
+4. Structured Data Extraction
+✅ Numbers & Statistics – Financial figures, research data, percentages, etc.
+✅ Monetary Values – Prices, budgets, revenues, expenses.
+✅ Measurements – Units of weight, distance, volume, speed, etc.
+✅ Legal References – Laws, regulations, contracts, compliance terms.
+----------------------------------------------------------------------------------------------------------------
+5. Actionable Elements
+✅ Decisions & Recommendations – Key choices or actions suggested in the document.
+✅ Action Items & Next Steps – Specific tasks or follow-ups required.
+✅ Questions Raised – Unanswered questions or topics requiring further discussion.
+----------------------------------------------------------------------------------------------------------------
+6. Contextual Insights
+✅ Comparisons & Contrasts – Differences and similarities between subjects.
+✅ Citations & References – Other sources, studies, or documents mentioned.
+✅ Implications & Consequences – Effects of the information presented.
+----------------------------------------------------------------------------------------------------------------
+7. Structural & Formatting Elements
+✅ Headings & Subheadings – Sections and organization of content.
+✅ Bullet Points & Lists – Key enumerations or structured points.
+✅ Tables & Charts – Data representations and visual elements.
+----------------------------------------------------------------------------------------------------------------
+8. Document Metadata (If Digital)
+✅ File Type & Format – PDF, DOCX, TXT, HTML, etc.
+✅ Word Count & Page Count – Document length.
+✅ Readability Score – Complexity of the language used.
+✅ Language Detection – Language(s) in the document.
+----------------------------------------------------------------------------------------------------------------
+9. Advanced Context & Thematic Analysis
+✅ Underlying Themes & Motifs – Not just topics, but recurring ideas or metaphors.
+✅ Hidden Agendas or Bias – Implicit perspectives, political or corporate bias.
+✅ Contradictions & Inconsistencies – Points in the document that don’t align.
+✅ Intent & Purpose Detection – Is the document informative, persuasive, misleading, etc.?
+✅ Explicit vs. Implicit Claims – What’s stated outright vs. what’s implied?
+----------------------------------------------------------------------------------------------------------------
+10. Social & Cultural Elements
+✅ Cultural References – Mentions of cultural, religious, or historical elements.
+✅ Idioms & Figurative Language – Metaphors, analogies, and unique phrasing.
+✅ Socioeconomic Impact – How the document affects or references different social groups.
+✅ Ethical & Moral Considerations – Discussions on ethics, fairness, or societal impact.
+----------------------------------------------------------------------------------------------------------------
+11. Deep Entity Recognition & Relationship Mapping
+✅ Connections Between People – How individuals or organizations relate to each other.
+✅ Hierarchy & Organizational Structure – Who reports to whom, roles, and influence.
+✅ Industry & Sector Classification – Identifying which business or academic sector applies.
+✅ Geopolitical Relevance – Global or regional influence of the document’s content.
+✅ Mentions of Intellectual Property – Patents, copyrights, trademarks, proprietary tech.
+----------------------------------------------------------------------------------------------------------------
+12. Sentiment & Emotional Tone Analysis
+✅ Emotion Detection – Fear, excitement, urgency, frustration, optimism.
+✅ Persuasive Techniques – Emotional appeals, logical arguments, rhetorical questions.
+✅ Public Perception Impact – How this document might influence opinions or trends.
+✅ Trustworthiness & Credibility Score – Evaluating sources, citations, and factual accuracy.
+----------------------------------------------------------------------------------------------------------------
+13. Advanced Data & Quantitative Analysis
+✅ Trend Extraction – Identifying patterns over time within the document.
+✅ Predictive Insights – Based on past data, what might happen next?
+✅ Financial Implications – How this document affects money, business, or economy.
+✅ Time-Sensitive Information – Information that may expire or change (e.g., stock prices, forecasts).
+----------------------------------------------------------------------------------------------------------------
+14. Legal, Compliance & Security Aspects
+✅ Legal Liabilities & Risks – Any legal consequences implied in the text.
+✅ Compliance Issues – Whether the content aligns with regulations (GDPR, HIPAA, SEC rules).
+✅ Cybersecurity & Data Sensitivity – Any private or sensitive data leaks.
+✅ Contractual Obligations – Binding clauses, obligations, warranties.
+✅ Regulatory References – Specific mentions of laws, industry rules, or government policies.
+----------------------------------------------------------------------------------------------------------------
+15. Media & Content Integrity
+✅ Fact-Checking Needs – Statements requiring verification.
+✅ Misinformation or Propaganda Indicators – Biased framing, misleading statistics, fake news patterns.
+✅ Plagiarism & Originality – Whether parts of the text match external sources.
+✅ Fake Reviews or Testimonials – If the document includes product or service recommendations.
+----------------------------------------------------------------------------------------------------------------
+16. Usability & Accessibility Factors
+✅ Readability Complexity – Is the document easy to understand (Flesch-Kincaid Score)?
+✅ Intended Audience Matching – Does the document match the knowledge level of its target readers?
+✅ Jargon vs. Layman’s Terms – How much technical or industry-specific language is used?
+✅ Translation & Localization Challenges – Phrases or sections that may be difficult to translate.
+----------------------------------------------------------------------------------------------------------------
+17. Influence & Impact Detection
+✅ Virality Potential – If this content is likely to be widely shared or quoted.
+✅ Market or Industry Disruption – Whether the document suggests major shifts in a field.
+✅ Political or Societal Influence – How it may affect policies, activism, or legislation.
+✅ Competitive Intelligence – How this document positions against competitors in a market.
+----------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------
+B COMPLIANCE ASSESSMENT TOOL
+----------------------------------------------------------------------------------------------------------------
+1. Regulatory Requirements Extraction
+✅ Regulation Name & Jurisdiction – Which law applies (e.g., GDPR, SEC rules, ISO 27001)?
+✅ Key Compliance Areas – Security, data privacy, financial reporting, HR policies, etc.
+✅ Obligations & Standards – Specific mandates companies must follow.
+✅ Penalties for Non-Compliance – Fines, legal actions, reputational risks.
+✅ Upcoming Changes – Future amendments, regulatory shifts.
+----------------------------------------------------------------------------------------------------------------
+2. Company Policy Analysis
+✅ Policy Title & Scope – Which internal policies apply (e.g., Data Protection, HR Conduct)?
+✅ Current Compliance Level – Fully aligned, partially compliant, or non-compliant.
+✅ Control Mechanisms – What systems, processes, or technologies enforce the policy?
+✅ Enforcement & Accountability – Who is responsible? (Legal team, HR, IT security?)
+✅ Review & Update History – When was it last assessed?
+----------------------------------------------------------------------------------------------------------------
+3. Gap & Risk Analysis
+✅ Missing Compliance Areas – Where policies fail to meet regulatory requirements.
+✅ Ambiguities or Conflicts – Areas where policies contradict regulations.
+✅ Operational Risks – Gaps that could lead to security breaches, fines, or lawsuits.
+✅ Financial Risks – Cost implications of non-compliance.
+✅ Legal & Reputation Risks – Public perception, legal liabilities, shareholder impact.
+----------------------------------------------------------------------------------------------------------------
+4. Recommendations & Future-Proofing
+✅ Immediate Fixes – Quick policy updates to meet current regulations.
+✅ Long-Term Adjustments – Strategic changes for evolving regulations.
+✅ New Policy Creation – Drafting new policies if none exist.
+✅ Monitoring Strategy – How to track compliance over time.
+✅ Technology & Automation Needs – Potential AI or software solutions for compliance.
+----------------------------------------------------------------------------------------------------------------
+
+
+

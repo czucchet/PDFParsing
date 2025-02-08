@@ -1,0 +1,2 @@
+LLM model_schema
+<bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponse'>>

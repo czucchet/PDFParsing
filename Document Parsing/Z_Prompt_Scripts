@@ -1,0 +1,242 @@
+def get_json_prompt():
+    return """
+Analyze this document and return a JSON object with the following structured analysis:
+{
+    "basic_document_details": {
+        "title": {
+            "field_description": "The main title or heading of the document",
+            "value": ""
+        },
+        "authors": {
+            "field_description": "Names of the author(s) or contributors",
+            "value": []
+        },
+        "date": {
+            "field_description": "Date of publication or creation",
+            "value": ""
+        },
+        "document_type": {
+            "field_description": "Report, article, research paper, email, contract, etc",
+            "value": ""
+        }
+    }
+}
+Document:
+"""
+
+
+----------------------------------------------------------------------------------------------------------------
+
+def get_json_prompt():
+    return """
+Analyze this document and return a JSON object with the following structured analysis:
+
+{
+    "basic_document_details": {
+        "title": {
+            "field_description": "The main title or heading of the document",
+            "value": ""
+        },
+        "authors": {
+            "field_description": "Names of the author(s) or contributors",
+            "value": []
+        },
+        "date": {
+            "field_description": "Date of publication or creation",
+            "value": ""
+        },
+        "document_type": {
+            "field_description": "Report, article, research paper, email, contract, etc",
+            "value": ""
+        }
+    },
+    "content_analysis": {
+        "main_topics": {
+            "field_description": "Core subjects discussed in the document",
+            "value": []
+        },
+        "key_insights": {
+            "field_description": "Important conclusions and findings",
+            "value": []
+        },
+        "keywords": {
+            "field_description": "Frequently mentioned terms",
+            "value": []
+        },
+        "sentiment_analysis": {
+            "field_description": "Overall tone (positive, neutral, negative)",
+            "value": ""
+        }
+    },
+    "context_analysis": {
+        "historical_context": {
+            "field_description": "Background information and historical relevance",
+            "value": ""
+        },
+        "target_audience": {
+            "field_description": "Intended readers or users",
+            "value": []
+        },
+        "industry_sector": {
+            "field_description": "Relevant industries or business sectors",
+            "value": []
+        }
+    },
+    "technical_analysis": {
+        "methodology": {
+            "field_description": "Research methods or analytical approaches used",
+            "value": ""
+        },
+        "technical_terms": {
+            "field_description": "Specialized vocabulary or jargon",
+            "value": []
+        },
+        "data_sources": {
+            "field_description": "Sources of information and data",
+            "value": []
+        }
+    },
+    "stakeholder_analysis": {
+        "key_stakeholders": {
+            "field_description": "People or organizations affected",
+            "value": []
+        },
+        "impact_assessment": {
+            "field_description": "Effects on different stakeholder groups",
+            "value": []
+        },
+        "dependencies": {
+            "field_description": "Critical relationships and dependencies",
+            "value": []
+        }
+    },
+    "risk_assessment": {
+        "identified_risks": {
+            "field_description": "Potential threats or challenges",
+            "value": []
+        },
+        "mitigation_strategies": {
+            "field_description": "Proposed solutions to risks",
+            "value": []
+        },
+        "risk_priorities": {
+            "field_description": "Risk ranking and importance",
+            "value": []
+        }
+    },
+    "compliance_analysis": {
+        "regulatory_requirements": {
+            "field_description": "Applicable laws and regulations",
+            "value": []
+        },
+        "compliance_status": {
+            "field_description": "Current compliance level",
+            "value": ""
+        },
+        "required_actions": {
+            "field_description": "Steps needed for compliance",
+            "value": []
+        }
+    },
+    "sentiment_emotional_analysis": {
+        "emotion_detection": {
+            "field_description": "Fear, excitement, urgency, frustration, optimism",
+            "value": []
+        },
+        "persuasive_techniques": {
+            "field_description": "Emotional appeals, logical arguments, rhetorical questions",
+            "value": []
+        },
+        "credibility_score": {
+            "field_description": "Trustworthiness evaluation (0-100)",
+            "value": 0
+        }
+    },
+    "quantitative_analysis": {
+        "trends": {
+            "field_description": "Patterns identified over time",
+            "value": []
+        },
+        "predictive_insights": {
+            "field_description": "Future predictions based on data",
+            "value": []
+        },
+        "financial_implications": {
+            "field_description": "Monetary impacts and considerations",
+            "value": []
+        }
+    },
+    "legal_security_analysis": {
+        "legal_risks": {
+            "field_description": "Potential legal consequences",
+            "value": []
+        },
+        "compliance_issues": {
+            "field_description": "Regulatory compliance concerns",
+            "value": []
+        },
+        "security_concerns": {
+            "field_description": "Data privacy and security issues",
+            "value": []
+        }
+    },
+    "content_integrity": {
+        "fact_checking": {
+            "field_description": "Verification needs and status",
+            "value": []
+        },
+        "misinformation_indicators": {
+            "field_description": "Potential misleading content",
+            "value": []
+        },
+        "plagiarism_check": {
+            "field_description": "Original vs borrowed content",
+            "value": ""
+        }
+    },
+    "usability_accessibility": {
+        "readability_score": {
+            "field_description": "Flesch-Kincaid Score (0-100)",
+            "value": 0
+        },
+        "audience_matching": {
+            "field_description": "Content suitability for target audience",
+            "value": ""
+        },
+        "technical_complexity": {
+            "field_description": "Level of technical language used",
+            "value": ""
+        }
+    },
+    "influence_impact": {
+        "virality_potential": {
+            "field_description": "Likelihood of content being shared",
+            "value": ""
+        },
+        "market_disruption": {
+            "field_description": "Potential industry impacts",
+            "value": []
+        },
+        "societal_influence": {
+            "field_description": "Effects on society and policy",
+            "value": []
+        }
+    },
+    "recommendations": {
+        "immediate_actions": {
+            "field_description": "Short-term steps to take",
+            "value": []
+        },
+        "long_term_strategy": {
+            "field_description": "Strategic long-term recommendations",
+            "value": []
+        },
+        "monitoring_approach": {
+            "field_description": "How to track implementation",
+            "value": ""
+        }
+    }
+}
+
+Document:
+"""    
