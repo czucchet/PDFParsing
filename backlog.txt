@@ -1,3 +1,7 @@
 
 -- 1 Add additional sections in prompt 
 -- 2 Build code to iteratively cycle through additional documents in one go
+-- 3 Employ Snippets and Templates. Identify code patterns and abstract them as ready to go artifacts to be used across projects
+-- 4 Generate unit tests
+-- 5 Learn and Utilize Shortcuts. Ask co pilot what the shortcuts are and have a guide to use them
+
