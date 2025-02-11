@@ -14,37 +14,39 @@ def get_sql_connection():
 def create_tables(conn):
 
     cursor = conn.cursor()
-    # Basic Document Details
     cursor.execute("""
-        IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'document_details')
-        BEGIN
-            CREATE TABLE document_details (
-                filename NVARCHAR(255),
-                section NVARCHAR(255),
-                field_summary NVARCHAR(200),
-                field_description NVARCHAR(200),
-                field_value NVARCHAR(MAX),
-            )
-        END            
+        IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'DocumentAnalysis')
+        CREATE TABLE DocumentAnalysis (
+            id INT IDENTITY(1,1) PRIMARY KEY,
+            filename VARCHAR(255),
+            section VARCHAR(100),
+            field VARCHAR(500),
+            field_description NVARCHAR(MAX),
+            value NVARCHAR(MAX)
+        )
     """)
         
     conn.commit()
     cursor.close()
 
 def insert_document_data(conn, filename, parsed_json):
-    with conn.cursor() as cursor:
-        # Iterate over each top-level section (e.g., basic_document_details, key_content_elements, entities, structured_data)
-        for section, fields in parsed_json.items():
-            # Ensure that each section is a dict containing field entries
-            if isinstance(fields, dict):
-                for field, content in fields.items():
-                    field_summary = field  # e.g., "title", "Summary", etc.
-                    field_description = content.get("field_description", "")
-                    value = content.get("value", "")
-                    # If value is a list, convert to comma-separated string:
-                    field_value = ", ".join(value) if isinstance(value, list) else value
-                    cursor.execute("""
-                        INSERT INTO document_details (filename, section, field_summary, field_description, field_value)
-                        VALUES (?, ?, ?, ?, ?)
-                    """, (filename, section, field_summary, field_description, field_value))
-        conn.commit()
+    cursor = conn.cursor()
+    
+    # Iterate through the JSON structure
+    for section_name, section_data in parsed_json.items():
+        for field_name, field_data in section_data.items():
+            # Extract both description and value
+            field_description = field_data.get('field description', '')
+            field_value = field_data.get('value', '')
+            
+            # Convert list values to string for storage
+            if isinstance(field_value, list):
+                field_value = ', '.join(map(str, field_value))
+            
+            # Insert both description and value
+            cursor.execute("""
+                INSERT INTO DocumentAnalysis (filename, section, field, field_description, value)
+                VALUES (?, ?, ?, ?, ?)
+            """, (filename, section_name, field_name, field_description, field_value))
+    
+    conn.commit()

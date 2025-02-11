@@ -1,4 +1,6 @@
-import os; import httpx; from dotenv import load_dotenv; import json; import re;import csv
+import os
+import httpx 
+from dotenv import load_dotenv; import json; import re;import csv
 from google import genai;  from google.genai import types
 from _1_BuildInputPrompt import get_json_prompt
 from _1_SetSQLServerConnections import get_sql_connection, create_tables, insert_document_data

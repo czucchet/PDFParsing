@@ -34,15 +34,19 @@ Summarize the following document based on the given criteria:
 4. Entities (Named Entity Recognition - NER)
 ✅ People (Names) – Individuals mentioned in the document.
 ✅ Organizations – Companies, institutions, or groups referenced.
-✅ Locations – Cities, countries, addresses, geographical places.
-✅ Dates & Time References – Specific days, months, years, time ranges.
-✅ Events – Conferences, historical events, meetings, project names.
+✅ Locations – Cities, countries, addresses, or geographical places.
+✅ Dates & Time References – Specific days, months, years, or time ranges.
+✅ Events – Conferences, historical events, meetings, or project names.
+Qualitative Questions:
+✅ How might the selection of entities influence the reader's perception of bias or emphasis?
+✅ What subtle narratives are suggested by the prominence of certain entities?
+
 ----------------------------------------------------------------------------------------------------------------
 4. Structured Data Extraction
 ✅ Numbers & Statistics – Financial figures, research data, percentages, etc.
-✅ Monetary Values – Prices, budgets, revenues, expenses.
+✅ Monetary Values – Prices, budgets, revenues, expenses, etc.
 ✅ Measurements – Units of weight, distance, volume, speed, etc.
-✅ Legal References – Laws, regulations, contracts, compliance terms.
+✅ Legal References – Laws, regulations, contracts, compliance terms, etc.
 ----------------------------------------------------------------------------------------------------------------
 5. Actionable Elements
 ✅ Decisions & Recommendations – Key choices or actions suggested in the document.

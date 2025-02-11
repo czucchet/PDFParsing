@@ -1,0 +1,8 @@
+pip install os
+pip install httpx 
+pip install dotenv;
+pip install json;
+pip install re;
+pip install csv
+pip install genai
+pip install types
