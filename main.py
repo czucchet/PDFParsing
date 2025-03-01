@@ -1,54 +1,35 @@
 import os
 import sys
 import subprocess
-import venv
 
-# If not in a virtual environment, create one and re-launch the script.
-if sys.prefix == sys.base_prefix:
-    venv_dir = os.path.join(os.path.dirname(__file__), 'venv')
-    if not os.path.exists(venv_dir):
-        print("Creating virtual environment...")
-        builder = venv.EnvBuilder(with_pip=True)
-        builder.create(venv_dir)
-    # Determine interpreter path according to OS.
-    if os.name == 'nt':
-        new_python = os.path.join(venv_dir, 'Scripts', 'python.exe')
-    else:
-        new_python = os.path.join(venv_dir, 'bin', 'python')
-    print(f"Re-launching script using virtual environment interpreter: {new_python}")
-    subprocess.check_call([new_python] + sys.argv)
-    sys.exit()
-
-# --- Now running inside the virtual environment ---
-
-import pkg_resources  # Part of setuptools
-import importlib.metadata  # For Python 3.8+
-
-def install_packages():
-    # List only external packages.
-    # csv, json, and os are built-in and don't need installation.
-    # Use the correct package name (e.g., "google-genai") for the genai library.
-    required_packages = {"httpx", "python-dotenv", "google-genai", "pyodbc","google"}
-    try:
-        # Retrieve installed packages (names normalized to lower-case).
-        installed = {pkg.key for pkg in pkg_resources.working_set}
-    except Exception:
-        installed = set()
-    missing = required_packages - installed
-    if missing:
-        print("Installing missing packages:", ", ".join(missing))
-        subprocess.check_call([sys.executable, "-m", "pip", "install", *list(missing)])
-    else:
-        print("All required packages are already installed.")
-
-# Install packages if needed
-install_packages()
-
-# ...existing code...
+def install_required_packages():
+    """Install all packages needed for the application"""
+    # Correct package names
+    packages = ["httpx", "python-dotenv", "google-generativeai", "pyodbc", "google-api-python-client"]
+    
+    print("Installing required packages...")
+    subprocess.check_call([
+        sys.executable, "-m", "pip", "install", "--upgrade", "--no-cache-dir", *packages
+    ])
+    print("Package installation complete.")
 
 def main():
-    print("Running inside the virtual environment with required packages installed!")
-    # ...existing code...
+    # 1. Install packages
+    install_required_packages()
+    
+    
+    # 2. Run the SQL Server Ingest script
+    # If wanting to run the SQL script via main.py uncomment the following lines
+    #script_path = os.path.join(os.path.dirname(__file__), "Document Parsing", "_2_SQL Server Ingest_Documents.py")
+    
+    #if os.path.exists(script_path):
+    #    print(f"Running document processing script: {script_path}")
+    #    subprocess.check_call([sys.executable, script_path])
+    #    print("Document processing complete.")
+    #else:
+    #    print(f"Error: Could not find {script_path}")
+    #    print("Current directory:", os.getcwd())
+    #    print("Available files:", os.listdir(os.path.join(os.getcwd(), "Document Parsing")))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -3,7 +3,7 @@ import pyodbc;import json
 # SQL Server connection details
 def get_sql_connection():
 
-    SERVER = r"LON001173\SQLEXPRESS02"
+    SERVER = r"DESKTOP-81QB3GH\SQLEXPRESS01"
     DATABASE = "PDFParse"
     # Use appropriate driver name installed on your machine, e.g., 'ODBC Driver 17 for SQL Server'
     DRIVER = "ODBC Driver 17 for SQL Server"
